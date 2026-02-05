@@ -1,0 +1,27 @@
+{
+    "name": "kulebyaka1337/gcd",
+    "description": "Console GCD game",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.0",
+        "wp-cli/php-cli-tools": "^0.12.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kulebyaka1337\\GCD\\": "src/"
+        },
+        "files":[
+            "src/Game.php",
+            "src/Controller.php",
+            "src/View.php",
+            "src/Database.php"            
+        ]
+    },
+    "bin": [
+        "bin/GCD.php"
+    ],
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^4.0"
+    }
+}

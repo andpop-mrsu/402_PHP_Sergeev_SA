@@ -1,0 +1,23 @@
+# === Composer ===
+/vendor/
+composer.lock
+
+# === Database ===
+*.sqlite
+*.db
+
+# === IDE ===
+.idea/
+.vscode/
+
+# === OS ===
+.DS_Store
+Thumbs.db
+
+# === Logs / cache ===
+*.log
+.cache/
+
+# === Temporary files ===
+*.tmp
+*.bak
