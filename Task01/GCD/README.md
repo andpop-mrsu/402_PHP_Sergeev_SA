@@ -36,7 +36,13 @@
 
 ## Установка
 
-Клонировать репозиторий и установить зависимости:
+Клонировать репозиторий:
+
+```bash
+git clone https://github.com/Kulebyaka1337/gcd.git
+cd gcd
+```
+и установить зависимости:
 
 ```bash
 composer install
@@ -52,6 +58,17 @@ composer install
 php bin/GCD.php
 ```
 
+## Запуск глобально (через Packagist)
+1. Установить пакет глобально: `composer global require kulebyaka1337/gcd`
+При конфликте зависимостей можно установить разово так: `composer global require kulebyaka1337/gcd -W`
+2. Узнать путь к глобальному `bin`:
+`composer global config bin-dir --absolute`
+3. Добавить этот путь в `PATH`
+4. Запускать командой: `gcd`
+
+## Packagist
+Пакет: `kulebyaka1337/gcd`
+Ссылка: https://packagist.org/packages/kulebyaka1337/gcd
 После запуска следуйте инструкциям в консоли.
 
 ---
