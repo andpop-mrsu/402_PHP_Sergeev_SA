@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Task03 — Игра «НОД»</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="container">
+    <header class="hero">
+        <h1>Лабораторная работа 3</h1>
+        <p>SPA на JavaScript + REST API на Slim + SQLite</p>
+    </header>
+
+    <main class="grid">
+        <section class="card">
+            <h2>Новая игра</h2>
+            <form id="start-form" class="stack">
+                <label for="player-name">Имя игрока</label>
+                <input id="player-name" name="player-name" type="text" maxlength="50" placeholder="Например, Андрей" required>
+                <button type="submit">Начать игру</button>
+            </form>
+            <p id="start-message" class="muted"></p>
+        </section>
+
+        <section class="card" id="game-card" hidden>
+            <h2>Текущая игра</h2>
+            <div class="stack">
+                <div><strong>Игрок:</strong> <span id="current-player">—</span></div>
+                <div><strong>Раунд:</strong> <span id="current-round">—</span></div>
+                <div class="question" id="question-text">—</div>
+                <form id="answer-form" class="stack">
+                    <label for="answer-input">Ваш ответ</label>
+                    <input id="answer-input" type="number" required>
+                    <button type="submit">Отправить ход</button>
+                </form>
+                <div id="step-feedback" class="feedback"></div>
+            </div>
+        </section>
+
+        <section class="card">
+            <div class="panel-header">
+                <h2>История игр</h2>
+                <button id="refresh-history" type="button" class="secondary">Обновить</button>
+            </div>
+            <div id="history-list" class="stack"></div>
+        </section>
+
+        <section class="card" id="details-card">
+            <h2>Детали выбранной игры</h2>
+            <div id="game-details" class="muted">Выбери игру из списка истории, чтобы увидеть все ходы.</div>
+        </section>
+    </main>
+</div>
+<script src="/app.js"></script>
+</body>
+</html>
